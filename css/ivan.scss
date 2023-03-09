@@ -8,11 +8,15 @@ body{
     }
 nav{
     background: $color-uno;
+
     .navbar-brand{
         color: $color-dos;    
     }
     .nav-link{
         color: $color-dos;
+    }
+    .navbar-toggler{
+        background: rgba(255, 255, 255, 0.7);
     }
 }    
 section{
@@ -28,7 +32,6 @@ section{
     .section-header{
         color: $color-dos;
         h2{font-weight: bold;}
-        
     }
 }
 @mixin fondotexto($fondo:$color-tres,$texto:$color-dos){
@@ -38,6 +41,7 @@ section{
     color: $texto;
 }
 .carousel-inner{
+    max-height: 39rem;
     h5{
         @include fondotexto();
     }   
@@ -50,3 +54,9 @@ section{
     background: rgb(255, 221, 0);
     box-shadow: 2px 2px 2px rgba(255, 221, 0, 0.5);
 }
+@media only screen and (max-width: 600px){
+    .carousel-inner{
+        width: 35rem;
+    }
+    
+ }
